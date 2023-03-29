@@ -19,6 +19,7 @@ integer connected;
 
 key urlRequestId;
 key qrRequestId;
+key comRequestId;
 
 list gHttpParams = [
     HTTP_METHOD, "POST",
@@ -94,6 +95,13 @@ default
             if(debug)llOwnerSay(qr_url);
 
             llDialog(user_uuid, "\n \nClick to pair your toys with QR Code:\n \n" +  qr_url, ["OK"], chan);
+
+        }
+        
+        if(request_id == comRequestId){
+
+            // here we get the response if vibration command was susscessfully received >> {"result":true,"code":200,"message":"Success"}
+            if(debug) llOwnerSay(body);
 
         }
 
