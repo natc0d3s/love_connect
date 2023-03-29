@@ -54,14 +54,14 @@ vibe(){
         "token", dev_token, // Lovense developer token
         "uid", (string)user_uuid,  // user ID on your website
         "command", "Function",
-        "action", "Vibrate:16",
-        "timeSec", 20,
-        "loopRunningSec", 9,
-        "loopPauseSec", 4,
+        "action", "Vibrate:5",
+        "timeSec", 1,
+        "loopRunningSec", 0,
+        "loopPauseSec", 0,
         "apiVer", 1
     ]);
     
-    llHTTPRequest(api_url, gHttpParams, json);
+    comRequestId = llHTTPRequest(api_url, gHttpParams, json);
   
 }
 
